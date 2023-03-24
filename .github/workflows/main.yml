@@ -78,7 +78,7 @@ jobs:
           cd ..
           cd ..
           
-      - name: Copying
+      - name: Copying Files
         run: |
           ls
           cp -r build/WebGL/WebGL/* BuildWebGL/
