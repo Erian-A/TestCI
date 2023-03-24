@@ -42,7 +42,7 @@ jobs:
       #   with:
       #     githubToken: ${{ secrets.GITHUB_TOKEN }}
       #     customParameters: -nographics
-      # rm -r BuildWebGL
+
       # Build
       - name: BuildProject
         uses: game-ci/unity-builder@v2
@@ -62,7 +62,7 @@ jobs:
 
       - name: Display structure of downloaded files
         run: |
-          
+          rm -r BuildWebGL
           mkdir BuildWebGL
           ls
           echo "--"
@@ -111,6 +111,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:testesfirestore-8878f
+          args: deploy --only hosting:testeci-16de2
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
