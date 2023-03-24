@@ -42,7 +42,7 @@ jobs:
       #   with:
       #     githubToken: ${{ secrets.GITHUB_TOKEN }}
       #     customParameters: -nographics
-
+      # rm -r BuildWebGL
       # Build
       - name: BuildProject
         uses: game-ci/unity-builder@v2
@@ -62,7 +62,7 @@ jobs:
 
       - name: Display structure of downloaded files
         run: |
-          rm -r BuildWebGL
+          
           mkdir BuildWebGL
           ls
           echo "--"
